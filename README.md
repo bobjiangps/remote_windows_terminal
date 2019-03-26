@@ -7,5 +7,7 @@ need to turn on winrm service on windows.
 * Enable-WSManCredSSP -Role Server -Force
 * Set-Item -Path "WSMan:\localhost\Service\Auth\CredSSP" -Value $true
 
+override the run_cmd function in pywinrm, user can set flag to not wait for the reponse. for example, start some bat files but need to wait hours to get response, then user is not allowed to input next command, set flag to aovid waiting so long.
+
 sample picture:
 ![Image text](https://www.byincd.com/media/upload/Bo/2019/03/26/command_remote_win_Fb9zbGf.png)

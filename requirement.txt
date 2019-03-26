@@ -1,0 +1,14 @@
+asn1crypto==0.24.0
+certifi==2019.3.9
+cffi==1.12.2
+chardet==3.0.4
+cryptography==2.6.1
+idna==2.8
+ntlm-auth==1.2.0
+pycparser==2.19
+pywinrm==0.3.0
+requests==2.21.0
+requests-ntlm==1.1.0
+six==1.12.0
+urllib3==1.24.1
+xmltodict==0.12.0

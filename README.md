@@ -10,4 +10,4 @@ need to turn on winrm service on windows.
 override the run_cmd function in pywinrm, user can set flag to not wait for the reponse. for example, start some bat files but need to wait hours to get response, then user is not allowed to input next command, set flag to aovid waiting so long.
 
 sample picture:
-![Image text](https://www.byincd.com/media/upload/Bo/2019/03/26/command_remote_win_Fb9zbGf.png)
+![Image text](https://www.byincd.com/media/upload/Bo/2019/04/01/connect_remote_windows-2.png)

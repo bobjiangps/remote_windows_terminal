@@ -54,8 +54,10 @@ if __name__ == "__main__":
         raise NameError("please assign one windows name")
     else:
         new_session = connect_remote_windows(slave_config[sys.argv[-1].lower()], auth_config["name"], auth_config["passwd"])
+        hostname = run_command(new_session, "hostname").strip()
+        prefix = hostname + "@" + auth_config["name"]
         while True:
-            new_command = input("Command > ")
+            new_command = input("%s > " % prefix)
             if new_command.find("run_client") >= 0:
                 run_command(new_session, new_command, True)
             else:

@@ -4,6 +4,7 @@ import sys
 
 class Connection:
 
+    @staticmethod
     def run_command(session, command, not_wait_flag=False):
         if command == "q":
             sys.exit()
@@ -19,6 +20,7 @@ class Connection:
                 print(output)
                 return output
 
+    @staticmethod
     def connect_remote_windows(ip, name, passwd):
         s = winrm.Session('http://%s:5985/wsman' % ip, auth=(name, passwd), transport='ntlm')
         return s

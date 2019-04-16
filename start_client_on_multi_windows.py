@@ -75,8 +75,8 @@ if __name__ == "__main__":
                     new_session = Connection.connect_remote_windows(slave_config[slave_name.lower()], auth_config["name"], auth_config["passwd"])
                     Connection.run_command(new_session, r"C:\java_farm_client\run_client.bat", True)
                     print(f"{slave_name} start farm client success")
-                except:
-                    print(f"--{slave_name} start farm client FAIL--")
+                except Exception as e:
+                    print(f"--{slave_name} start farm client FAIL, error is {str(e)}--")
             else:
                 print(f"{slave_name} not start farm client because of exclusion")
         else:
